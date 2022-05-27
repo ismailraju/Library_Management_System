@@ -1,0 +1,49 @@
+
+    
+<form class="container">
+    <div class="form-group">
+    <br>
+    <h4>How is the Librarian's behaviour towards user? </h4>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" formControlName="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">Bad</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" formControlName="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">Good</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" formControlName="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">Need Improvement</label>
+      </div>
+    </div>
+      <br>
+      <div class="form-group">
+      <h4>Is librarian able to manage the books records properly?</h4>
+      <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4" formControlName="inlineRadio4" value="option1">
+          <label class="form-check-label" for="inlineRadio4">Bad</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio5" formControlName="inlineRadio5"value="option2">
+          <label class="form-check-label" for="inlineRadio5">Good</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio6" formControlName="inlineRadio6" value="option3" >
+          <label class="form-check-label" for="inlineRadio6">Need Improvement</label>
+        </div>
+      </div>
+    <br>
+    <label for="feedback">Anyother suggestions </label>
+      <textarea class="form-control" id="feedback" rows="3" formControlName="feedback"></textarea>
+    
+
+    <div class="container">
+        <span id="rateMe1"></span>
+      </div>
+    <script src="js/addons/rating.js"></script>
+
+    <button type="submit" class="btn btn-primary" (click)="adminfeedbackSubmit()">Submit</button>
+
+  </form>
+

@@ -1,0 +1,25 @@
+show databases;
+create database LibraryManagementSystem;
+show tables;
+use LibraryManagementSystem;
+ 
+select * from user;
+select * from admin;
+select * from librarian;
+select * from book;
+select user_password from user where  user_userid = "naman";
+select * from book where b_number=1;
+
+create table admin(ad_username varchar(20), ad_password varchar(20));
+insert into admin values('Admin' , 'adminxyz');
+insert into librarian values('anuj' , 'axyz','1234-12-12','male','45678','xyz@yahoo','anuj','xyz123');
+insert into librarian values('abhishek' , 'axyz','1234-10-12','male','98765','xyz@gmail','abhishek','abc123');
+drop table book;
+insert into book values("1","conceptOfPhysics","HCverma","physics");
+insert into book values("2","ncert","cbse","chem");
+insert into book values("3","englishCommunication","rg verma","english");
+insert into book values("4","computerScience","rd sharma","cs");
+
+create table book(b_number int , b_name varchar(30), b_author varchar(20), b_subject varchar(20));
+create table librarian(lib_firstname varchar(20), lib_lastname varchar(20), lib_dob date , lib_gender varchar(10), lib_contact int , lib_email varchar(20), lib_userid varchar(20), lib_password varchar(20));
+create table user(user_firstname varchar(20), user_lastname varchar(20), user_dob date , user_gender varchar(10), user_contact int , user_email varchar(20), user_userid varchar(20), user_password varchar(20));

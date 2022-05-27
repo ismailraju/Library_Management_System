@@ -1,0 +1,14 @@
+
+<div class="container">
+    <form [formGroup]="searchForm">
+      <label class="sr-only" for="booknumber">Book Number</label>
+      <input type="number" class="form-control" id="booknumber" formControlName="booknumber">
+    
+        <div class="mt-4 pt-2">
+          <button class="btn btn-primary btn-lg" type="submit"  (click)="SearchSubmit()">search</button>
+        </div>
+      </form>
+    </div>
+    
+     
+     

@@ -1,0 +1,10 @@
+<form [formGroup]="feedbackForm" >
+    <h3>Share your experience!</h3>
+    <div class="form-group">
+      <label for="feedback"> </label>
+      <textarea class="form-control" id="feedback" rows="3" formControlName="feedback"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="feedbackSubmit()">Submit</button>
+
+  </form>

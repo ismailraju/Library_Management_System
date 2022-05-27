@@ -1,0 +1,24 @@
+<h1>Book Details</h1>
+<table class="table table-success table-striped">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Book Number</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Subject</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor ="let list of books">
+            <td>{{list.booknumber}}</td>
+            <td>{{list.bookname}}</td>
+            <td>{{list.author}}</td>
+            <td>{{list.subject}}</td>
+            <button (click)="update(list.booknumber)">update</button>
+          </tr>
+        </tbody>
+      </table>
+
+  </table>

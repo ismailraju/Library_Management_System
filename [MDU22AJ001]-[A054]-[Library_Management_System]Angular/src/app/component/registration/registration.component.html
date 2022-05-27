@@ -1,0 +1,160 @@
+
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="RegisterSubmit($event)">
+ 
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+ 
+                    <div class="form-group">
+                      <label class="form-label" for="firstname">First Name</label>
+                      <input type="text" class="form-control" id="firstname" formControlName="firstname"/>
+                    </div>
+                    <div *ngIf="getErrors(this.registerForm.get('firstname'))" class="alert alert-danger mt-2">
+                      <small *ngIf="this.registerForm.get('firstname')?.getError('required')">
+                        Firstname is required
+                      </small>
+                    </div>
+                   </div>
+
+                  <div class="col-md-6 mb-4">
+ 
+                    <div class="form-group">
+                      <label class="form-label" for="lastname">Last Name</label>
+                      <input type="text" class="form-control" id="lastname" formControlName="lastname"  />
+                    </div>
+                    <div *ngIf="getErrors(this.registerForm.get('lastname'))" class="alert alert-danger mt-2">
+                      <small *ngIf="this.registerForm.get('lastname')?.getError('required')">
+                        Lastname is required
+                      </small>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                <div class="form-group">
+ 
+                    <div class="form-outline datepicker">
+                      <label for="dob" >DOB</label>
+                      <input name="dob"
+                        type="date"
+                        class="form-control "
+                        id="dob"
+                        formControlName="dob"
+                      />
+                    </div>
+                  </div>
+                   <div *ngIf="getErrors(this.registerForm.get('dob'))" class="alert alert-danger mt-2">
+                      <small *ngIf="this.registerForm.get('dob')?.getError('required')">
+                        DOB is required
+                      </small>
+                    </div>
+                  </div>
+              
+                  
+                  <div class="col-md-6 mb-4">
+                     <h6 class="mb-2 pb-1">Gender:</h6>
+ 
+                     <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="female" formControlName="gender" value="Female">
+                      <label class="form-check-label" for="gender">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="gender" id="male" formControlName="gender"value="Male" >
+                      <label class="form-check-label" for="gender">Male</label>
+                    </div>
+                  </div>
+              
+
+ 
+              </div>
+ 
+                <div class="row">
+                  <div class="col-md-6 mb-4 pb-2">
+ 
+                    <div class="form-group">
+                      <label class="form-label" for="email">Email</label>
+                      <input type="email" id="email" formControlName="email" class="form-control" />
+                    </div>
+
+                    <div *ngIf="getErrors(this.registerForm.get('email'))" class="alert alert-danger mt-2">
+                      <small *ngIf="this.registerForm.get('email')?.getError('required')">
+                        Email is required
+                      </small>
+                    </div>
+ 
+                  </div>
+                  <div class="col-md-6 mb-4 pb-2">
+ 
+                    <div class="form-group">
+                      <label class="form-label" for="contactno">Phone Number</label>
+                      <input type="tel" id="contactno" formControlName="contactno" class="form-control" />
+                    </div>
+
+                    <div *ngIf="getErrors(this.registerForm.get('contactno'))" class="alert alert-danger mt-2">
+                      <small *ngIf="this.registerForm.get('contactno')?.getError('required')">
+                        Contact No is required
+                      </small>
+                    </div>
+ 
+                  </div>
+                </div>
+ 
+                <div class="row">
+                  <div class="col-6">
+ 
+                    <label class="form-label" >Category</label>
+                    <select class="form-control">
+                      <option value="1">User</option>
+                      <option value="2">Librarian</option>
+                    </select>
+                  </div>
+                </div>
+                <br>    
+ 
+
+                <div class="col-md-6 mb-4">
+ 
+                    <div class="form-group">
+                      <label class="form-label" for="userid">UserId</label>
+                      <input type="text" id="userid" formControlName="userid" class="form-control"/>
+                    </div>
+                      
+                    <div *ngIf="getErrors(this.registerForm.get('userid'))" class="alert alert-danger mt-2">
+                      <small *ngIf="this.registerForm.get('userid')?.getError('required')">
+                       UserId is required
+                      </small>
+                    </div>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+ 
+                    <div class="form-group">
+                      <label class="form-label" for="password">Password</label>
+                      <input type="password" id="password" formControlName="password" class="form-control" />
+                    </div>
+                      
+                    <div *ngIf="getErrors(this.registerForm.get('password'))" class="alert alert-danger mt-2">
+                      <small *ngIf="this.registerForm.get('password')?.getError('required')">
+                        Password is required
+                      </small>
+                    </div>
+                  </div>
+ 
+                <div class="mt-4 pt-2">
+                  <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                </div>
+ 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
